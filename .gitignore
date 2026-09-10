@@ -1,0 +1,108 @@
+﻿# ============================================
+# 1. ENTORNOS VIRTUALES DE PYTHON
+# ============================================
+.venv/
+venv/
+ENV/
+env/
+
+# ============================================
+# 2. ARCHIVOS DE MODELOS Y ARTEFACTOS ML (CRÍTICO)
+# ============================================
+# Ignora TODOS los modelos entrenados para evitar el error de 100MB de GitHub
+outputs/models/
+*.joblib
+*.pkl
+*.pickle
+*.pth
+*.pt
+*.onnx
+*.h5
+
+# ============================================
+# 3. ARCHIVOS TEMPORALES Y DE COMPILACIÓN DE PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# 4. JUPYTER NOTEBOOKS
+# ============================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================
+# 5. ENTORNOS Y VARIABLES DE ENTORNO
+# ============================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ============================================
+# 6. EDITORES DE CÓDIGO E IDEs
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ============================================
+# 7. SISTEMA OPERATIVO
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# 8. LOGS Y ARCHIVOS TEMPORALES
+# ============================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ============================================
+# 9. COBERTURA DE PRUEBAS Y LINTING
+# ============================================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/

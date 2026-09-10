@@ -1,0 +1,17 @@
+field,description
+ticket_id,Unique synthetic ticket identifier
+created_at,Ticket creation timestamp
+category,Support category
+priority,Ticket priority
+channel,Intake channel
+assigned_team,Assigned support tier
+agent,Synthetic assigned agent
+current_stage,Current workflow stage
+status,Ticket status
+first_response_hours,Hours until first response
+waiting_hours,Hours spent waiting
+resolution_hours,Total hours to resolution
+queue_age_hours,Current queue age in hours
+sla_hours,SLA target in hours
+sla_breach,Whether the ticket breached its SLA
+customer_satisfaction,Synthetic customer satisfaction score from 1–5
