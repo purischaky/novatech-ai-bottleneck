@@ -18,18 +18,19 @@ This project is a portfolio demonstration built around a theoretical business sc
 
 ---
 ## 🚀 Quickstart
-# 1. Install dependencies
+### 1. Install dependencies: 
 pip install -r requirements.txt
-# 2. Train the model
+### 2. Train the model: 
 python scripts/train.py --data data/support_tickets.csv --output outputs/models/intake_baseline
-# 3. Run predictions
+### 3. Run predictions: 
 python scripts/predict.py --input data/support_tickets.csv --output outputs/predictions.csv
-# 4. Generate explainability reports
+### 4. Generate explainability reports: 
 python src/explainability.py
-# Run the test suite
+### Run the test suite: 
 python -m pytest test/ -v
 
 ## 🏗️ Repository Architecture
+```text
 novatech-ai-bottleneck/
 ├── data/
 │   ├── support_tickets.csv              # 20,000 synthetic ticket records
@@ -53,6 +54,7 @@ novatech-ai-bottleneck/
 │   └── reports/                         # SHAP plots and evaluation manifests
 ├── requirements.txt
 └── README.md
+```
 
 ---
 

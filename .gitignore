@@ -1,16 +1,12 @@
-﻿# ============================================
-# 1. ENTORNOS VIRTUALES DE PYTHON
-# ============================================
+﻿# PYTHON VIRTUAL ENVIRONMENTS
 .venv/
 venv/
 ENV/
 env/
+env.bak/
+venv.bak/
 
-# ============================================
-# 2. ARCHIVOS DE MODELOS Y ARTEFACTOS ML (CRÍTICO)
-# ============================================
-# Ignora TODOS los modelos entrenados para evitar el error de 100MB de GitHub
-outputs/models/
+# MACHINE LEARNING ARTIFACTS & MODEL WEIGHTS (CRITICAL: >100MB LIMIT)
 *.joblib
 *.pkl
 *.pickle
@@ -18,15 +14,21 @@ outputs/models/
 *.pt
 *.onnx
 *.h5
+*.ckpt
 
-# ============================================
-# 3. ARCHIVOS TEMPORALES Y DE COMPILACIÓN DE PYTHON
-# ============================================
+# Model artifact directories
+outputs/models/*
+outputs/predictions.csv
+
+# Retain directory structure via gitkeep
+!outputs/models/**/.gitkeep
+!outputs/reports/**/.gitkeep
+
+# PYTHON BYTECODE & COMPILED OBJECTS
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
 build/
 develop-eggs/
 dist/
@@ -43,35 +45,25 @@ wheels/
 .installed.cfg
 *.egg
 
-# ============================================
-# 4. JUPYTER NOTEBOOKS
-# ============================================
+# JUPYTER NOTEBOOK CHECKPOINTS
 .ipynb_checkpoints/
-*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
-# ============================================
-# 5. ENTORNOS Y VARIABLES DE ENTORNO
-# ============================================
+# ENVIRONMENT VARIABLES & SECRETS
 .env
-.env.local
-.env.*.local
-*.env
+.env.*
+!.env.example
 
-# ============================================
-# 6. EDITORES DE CÓDIGO E IDEs
-# ============================================
+# IDEs, EDITORS & WORKSPACES
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.project
-.pydevproject
-.settings/
+*.sublime-project
+*.sublime-workspace
 
-# ============================================
-# 7. SISTEMA OPERATIVO
-# ============================================
+# OPERATING SYSTEM ARTIFACTS
 .DS_Store
 .DS_Store?
 ._*
@@ -81,28 +73,22 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# ============================================
-# 8. LOGS Y ARCHIVOS TEMPORALES
-# ============================================
+# LOGS, CACHE & RUNTIME MONITORING
 *.log
 logs/
 tmp/
 temp/
-*.tmp
-*.temp
+wandb/
+runs/
+.mlflow/
 
-# ============================================
-# 9. COBERTURA DE PRUEBAS Y LINTING
-# ============================================
-htmlcov/
-.tox/
-.nox/
+# TESTING, COVERAGE & PROFILING
+.pytest_cache/
 .coverage
 .coverage.*
-.cache
-nosetests.xml
+htmlcov/
 coverage.xml
-*.cover
-*.py,cover
+nosetests.xml
 .hypothesis/
-.pytest_cache/
+.mypy_cache/
+.ruff_cache/
